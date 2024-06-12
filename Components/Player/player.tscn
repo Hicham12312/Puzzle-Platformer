@@ -7,10 +7,10 @@
 size = Vector2(66, 65)
 
 [node name="Player" type="CharacterBody2D"]
-position = Vector2(344, 123)
 script = ExtResource("1_w7q3m")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.6, 0.443137, 0.0117647, 1)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_yt716")
 
@@ -24,3 +24,89 @@ shape = SubResource("RectangleShape2D_6tncb")
 offset_right = 40.0
 offset_bottom = 28.0
 theme_override_font_sizes/font_size = 20
+
+[node name="raycast" type="Node2D" parent="."]
+rotation = -1.5708
+
+[node name="RayCast01" type="RayCast2D" parent="raycast"]
+position = Vector2(0, 50)
+scale = Vector2(5, 5)
+target_position = Vector2(0, 500)
+
+[node name="RayCast02" type="RayCast2D" parent="raycast"]
+position = Vector2(2, 50)
+rotation = -0.0872665
+scale = Vector2(5, 5)
+target_position = Vector2(0, 500)
+
+[node name="RayCast03" type="RayCast2D" parent="raycast"]
+position = Vector2(-2, 50)
+rotation = 0.0872665
+scale = Vector2(5, 5)
+target_position = Vector2(0, 500)
+
+[node name="RayCast04" type="RayCast2D" parent="raycast"]
+position = Vector2(4, 50)
+rotation = -0.174533
+scale = Vector2(5, 5)
+target_position = Vector2(0, 500)
+
+[node name="RayCast05" type="RayCast2D" parent="raycast"]
+position = Vector2(-4, 50)
+rotation = 0.174533
+scale = Vector2(5, 5)
+target_position = Vector2(0, 500)
+
+[node name="RayCast06" type="RayCast2D" parent="raycast"]
+position = Vector2(8, 50)
+rotation = -0.261799
+scale = Vector2(5, 5)
+target_position = Vector2(0, 500)
+
+[node name="RayCast07" type="RayCast2D" parent="raycast"]
+position = Vector2(-8, 50)
+rotation = 0.261799
+scale = Vector2(5, 5)
+target_position = Vector2(0, 500)
+
+[node name="RayCast08" type="RayCast2D" parent="raycast"]
+position = Vector2(10, 50)
+rotation = -0.349066
+scale = Vector2(5, 5)
+target_position = Vector2(0, 500)
+
+[node name="RayCast09" type="RayCast2D" parent="raycast"]
+position = Vector2(-10, 50)
+rotation = 0.349066
+scale = Vector2(5, 5)
+target_position = Vector2(0, 500)
+
+[node name="RayCast10" type="RayCast2D" parent="raycast"]
+position = Vector2(-12, 50)
+rotation = 0.436332
+scale = Vector2(5, 5)
+target_position = Vector2(0, 500)
+
+[node name="RayCast11" type="RayCast2D" parent="raycast"]
+position = Vector2(12, 50)
+rotation = -0.436332
+scale = Vector2(5, 5)
+target_position = Vector2(0, 500)
+
+[node name="RayCast12" type="RayCast2D" parent="raycast"]
+position = Vector2(14, 50)
+rotation = -0.523599
+scale = Vector2(5, 5)
+target_position = Vector2(0, 500)
+
+[node name="RayCast13" type="RayCast2D" parent="raycast"]
+position = Vector2(-14, 50)
+rotation = 0.523599
+scale = Vector2(5, 5)
+target_position = Vector2(0, 500)
+
+[node name="RayCast14" type="RayCast2D" parent="raycast"]
+position = Vector2(16, 50)
+rotation = -0.610865
+scale = Vector2(5, 5)
+target_position = Vector2(0, 500)

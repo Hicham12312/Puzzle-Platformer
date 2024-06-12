@@ -1,18 +1,16 @@
 extends CharacterBody2D
 class_name Player
 
-const SPEED = 1000
+const SPEED = 1200
 const JUMP_POWER = 4000
 
-const ACC = 60
+const ACC = 50
 const FRICTION = 80
 const GRAVITY = 200
 
 const MAX_JUMPS = 1
 var current_jumps = 1
-
 @onready var label = $CanvasLayer/Label
-
 
 @warning_ignore("unused_parameter")
 func _physics_process(delta):
@@ -62,3 +60,7 @@ func jump():
 	
 	if is_on_floor():
 		current_jumps = 1
+
+
+func _on_visible_on_screen_notifier_2d_screen_exited():
+	get_tree().call_deferred("reload_current_scene")
