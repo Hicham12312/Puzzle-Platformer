@@ -110,3 +110,33 @@ position = Vector2(16, 50)
 rotation = -0.610865
 scale = Vector2(5, 5)
 target_position = Vector2(0, 500)
+
+[node name="RayCast15" type="RayCast2D" parent="raycast"]
+position = Vector2(-16, 50)
+rotation = 0.610865
+scale = Vector2(5, 5)
+target_position = Vector2(0, 500)
+
+[node name="RayCast16" type="RayCast2D" parent="raycast"]
+position = Vector2(18, 50)
+rotation = -0.698132
+scale = Vector2(5, 5)
+target_position = Vector2(0, 500)
+
+[node name="RayCast17" type="RayCast2D" parent="raycast"]
+position = Vector2(-18, 50)
+rotation = 0.698132
+scale = Vector2(5, 5)
+target_position = Vector2(0, 500)
+
+[node name="RayCast18" type="RayCast2D" parent="raycast"]
+position = Vector2(20, 50)
+rotation = -0.785398
+scale = Vector2(5, 5)
+target_position = Vector2(0, 500)
+
+[node name="RayCast19" type="RayCast2D" parent="raycast"]
+position = Vector2(-20, 50)
+rotation = 0.785398
+scale = Vector2(5, 5)
+target_position = Vector2(0, 500)
