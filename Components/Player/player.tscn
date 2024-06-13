@@ -1,7 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://cwywl5l6ly7oe"]
+[gd_scene load_steps=7 format=3 uid="uid://cwywl5l6ly7oe"]
 
 [ext_resource type="Script" path="res://Components/Player/Player.gd" id="1_w7q3m"]
 [ext_resource type="Texture2D" uid="uid://bexah4bhbnyk3" path="res://icon.svg" id="1_yt716"]
+[ext_resource type="PackedScene" uid="uid://dmsb26liyteur" path="res://Components/Slot/slot.tscn" id="3_nmmd1"]
+[ext_resource type="Script" path="res://Resources/Scripts/HotBar.gd" id="3_t2627"]
+[ext_resource type="Resource" uid="uid://cm1ie5av5oerv" path="res://Resources/items/DoubleJump.tres" id="4_cdgpl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6tncb"]
 size = Vector2(66, 65)
@@ -18,125 +21,40 @@ texture = ExtResource("1_yt716")
 position = Vector2(-1, -0.5)
 shape = SubResource("RectangleShape2D_6tncb")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="UI" type="CanvasLayer" parent="."]
 
-[node name="Label" type="Label" parent="CanvasLayer"]
+[node name="Label" type="Label" parent="UI"]
 offset_right = 40.0
 offset_bottom = 28.0
 theme_override_font_sizes/font_size = 20
 
-[node name="raycast" type="Node2D" parent="."]
-rotation = -1.5708
+[node name="HotBar" type="HBoxContainer" parent="UI"]
+anchors_preset = -1
+anchor_left = 0.425347
+anchor_top = 0.938272
+anchor_right = 0.574653
+anchor_bottom = 1.0
+offset_left = -248.0
+offset_top = -120.0
+offset_right = -248.0
+offset_bottom = -120.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(4, 4)
+script = ExtResource("3_t2627")
 
-[node name="RayCast01" type="RayCast2D" parent="raycast"]
-position = Vector2(0, 50)
-scale = Vector2(5, 5)
-target_position = Vector2(0, 500)
+[node name="slot" parent="UI/HotBar" instance=ExtResource("3_nmmd1")]
+layout_mode = 2
+stats = ExtResource("4_cdgpl")
 
-[node name="RayCast02" type="RayCast2D" parent="raycast"]
-position = Vector2(2, 50)
-rotation = -0.0872665
-scale = Vector2(5, 5)
-target_position = Vector2(0, 500)
+[node name="slot2" parent="UI/HotBar" instance=ExtResource("3_nmmd1")]
+layout_mode = 2
+stats = ExtResource("4_cdgpl")
 
-[node name="RayCast03" type="RayCast2D" parent="raycast"]
-position = Vector2(-2, 50)
-rotation = 0.0872665
-scale = Vector2(5, 5)
-target_position = Vector2(0, 500)
+[node name="slot3" parent="UI/HotBar" instance=ExtResource("3_nmmd1")]
+layout_mode = 2
+stats = ExtResource("4_cdgpl")
 
-[node name="RayCast04" type="RayCast2D" parent="raycast"]
-position = Vector2(4, 50)
-rotation = -0.174533
-scale = Vector2(5, 5)
-target_position = Vector2(0, 500)
-
-[node name="RayCast05" type="RayCast2D" parent="raycast"]
-position = Vector2(-4, 50)
-rotation = 0.174533
-scale = Vector2(5, 5)
-target_position = Vector2(0, 500)
-
-[node name="RayCast06" type="RayCast2D" parent="raycast"]
-position = Vector2(8, 50)
-rotation = -0.261799
-scale = Vector2(5, 5)
-target_position = Vector2(0, 500)
-
-[node name="RayCast07" type="RayCast2D" parent="raycast"]
-position = Vector2(-8, 50)
-rotation = 0.261799
-scale = Vector2(5, 5)
-target_position = Vector2(0, 500)
-
-[node name="RayCast08" type="RayCast2D" parent="raycast"]
-position = Vector2(10, 50)
-rotation = -0.349066
-scale = Vector2(5, 5)
-target_position = Vector2(0, 500)
-
-[node name="RayCast09" type="RayCast2D" parent="raycast"]
-position = Vector2(-10, 50)
-rotation = 0.349066
-scale = Vector2(5, 5)
-target_position = Vector2(0, 500)
-
-[node name="RayCast10" type="RayCast2D" parent="raycast"]
-position = Vector2(-12, 50)
-rotation = 0.436332
-scale = Vector2(5, 5)
-target_position = Vector2(0, 500)
-
-[node name="RayCast11" type="RayCast2D" parent="raycast"]
-position = Vector2(12, 50)
-rotation = -0.436332
-scale = Vector2(5, 5)
-target_position = Vector2(0, 500)
-
-[node name="RayCast12" type="RayCast2D" parent="raycast"]
-position = Vector2(14, 50)
-rotation = -0.523599
-scale = Vector2(5, 5)
-target_position = Vector2(0, 500)
-
-[node name="RayCast13" type="RayCast2D" parent="raycast"]
-position = Vector2(-14, 50)
-rotation = 0.523599
-scale = Vector2(5, 5)
-target_position = Vector2(0, 500)
-
-[node name="RayCast14" type="RayCast2D" parent="raycast"]
-position = Vector2(16, 50)
-rotation = -0.610865
-scale = Vector2(5, 5)
-target_position = Vector2(0, 500)
-
-[node name="RayCast15" type="RayCast2D" parent="raycast"]
-position = Vector2(-16, 50)
-rotation = 0.610865
-scale = Vector2(5, 5)
-target_position = Vector2(0, 500)
-
-[node name="RayCast16" type="RayCast2D" parent="raycast"]
-position = Vector2(18, 50)
-rotation = -0.698132
-scale = Vector2(5, 5)
-target_position = Vector2(0, 500)
-
-[node name="RayCast17" type="RayCast2D" parent="raycast"]
-position = Vector2(-18, 50)
-rotation = 0.698132
-scale = Vector2(5, 5)
-target_position = Vector2(0, 500)
-
-[node name="RayCast18" type="RayCast2D" parent="raycast"]
-position = Vector2(20, 50)
-rotation = -0.785398
-scale = Vector2(5, 5)
-target_position = Vector2(0, 500)
-
-[node name="RayCast19" type="RayCast2D" parent="raycast"]
-position = Vector2(-20, 50)
-rotation = 0.785398
-scale = Vector2(5, 5)
-target_position = Vector2(0, 500)
+[node name="slot4" parent="UI/HotBar" instance=ExtResource("3_nmmd1")]
+layout_mode = 2
+stats = ExtResource("4_cdgpl")

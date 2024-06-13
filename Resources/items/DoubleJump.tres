@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://cm1ie5av5oerv"]
+
+[ext_resource type="Texture2D" uid="uid://25fv3peh06pf" path="res://Assets/Free-Skill-32x32-Icons-for-Cyberpunk-Game/1 Icons/6/Skillicon6_02.png" id="1_7xgvq"]
+[ext_resource type="Script" path="res://Resources/Scripts/item.gd" id="1_pt14t"]
+
+[resource]
+script = ExtResource("1_pt14t")
+icon = ExtResource("1_7xgvq")
+name = "DoubleJump"
+type = "Ability"

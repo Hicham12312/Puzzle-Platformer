@@ -8,12 +8,14 @@ const ACC = 50
 const FRICTION = 80
 const GRAVITY = 200
 
-const MAX_JUMPS = 1
+var MAX_JUMPS = 1
 var current_jumps = 1
-@onready var label = $CanvasLayer/Label
+
+@onready var label = $UI/Label
 
 @warning_ignore("unused_parameter")
 func _physics_process(delta):
+	Global.player = self
 	var input_dir: Vector2 = input()
 	
 	if input_dir != Vector2.ZERO:
