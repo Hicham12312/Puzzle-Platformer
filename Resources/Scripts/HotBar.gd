@@ -31,3 +31,8 @@ func _input(event):
 		else:
 			current_index -= 1
 
+func add_item(stats):
+	for slot in slots:
+		if slot.stats == null:
+			slot.stats = stats
+			return

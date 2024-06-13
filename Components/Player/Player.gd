@@ -12,6 +12,7 @@ var MAX_JUMPS = 1
 var current_jumps = 1
 
 @onready var label = $UI/Label
+@onready var hot_bar = $UI/HotBar
 
 @warning_ignore("unused_parameter")
 func _physics_process(delta):
@@ -66,3 +67,7 @@ func jump():
 
 func _on_visible_on_screen_notifier_2d_screen_exited():
 	get_tree().call_deferred("reload_current_scene")
+
+func add_item(stats):
+	hot_bar.add_item(stats)
+

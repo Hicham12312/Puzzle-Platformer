@@ -58,3 +58,5 @@ stats = ExtResource("4_cdgpl")
 [node name="slot4" parent="UI/HotBar" instance=ExtResource("3_nmmd1")]
 layout_mode = 2
 stats = ExtResource("4_cdgpl")
+
+[node name="Weapons" type="Node2D" parent="."]
