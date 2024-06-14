@@ -1,10 +1,36 @@
-[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://urgotiloxkdn"]
+[gd_resource type="Resource" script_class="Item" load_steps=11 format=3 uid="uid://urgotiloxkdn"]
 
-[ext_resource type="Texture2D" uid="uid://bbi6wjy8xi4sv" path="res://Assets/Items/GrapplingHook/Grappling_Hook-removebg-preview.png" id="1_ad40m"]
+[ext_resource type="Texture2D" uid="uid://dr3ljskwclbaa" path="res://Assets/Items/Star/tile000.png" id="1_a5j5j"]
 [ext_resource type="Script" path="res://Resources/Scripts/item.gd" id="2_brn7f"]
+[ext_resource type="Texture2D" uid="uid://dq5jit1sy4juc" path="res://Assets/Items/Star/tile001.png" id="2_cq118"]
+[ext_resource type="Texture2D" uid="uid://b5na84ltysdh5" path="res://Assets/Items/Star/tile002.png" id="3_bexjk"]
+[ext_resource type="Texture2D" uid="uid://dqa3ptm5l7u3h" path="res://Assets/Items/Star/tile003.png" id="4_rejfb"]
+[ext_resource type="Texture2D" uid="uid://duecqh3klrmhe" path="res://Assets/Items/Star/tile004.png" id="5_rk7bj"]
+[ext_resource type="Texture2D" uid="uid://c8s7rjiqfuxy2" path="res://Assets/Items/Star/tile005.png" id="6_6qbuk"]
+[ext_resource type="Texture2D" uid="uid://dj73t8cf0uvhl" path="res://Assets/Items/Star/tile006.png" id="7_3kdt4"]
+[ext_resource type="Texture2D" uid="uid://bfob1ic015es4" path="res://Assets/Items/Star/tile007.png" id="8_egtrx"]
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_stmvr"]
+frames = 8
+speed_scale = 12.0
+frame_0/texture = ExtResource("1_a5j5j")
+frame_1/texture = ExtResource("2_cq118")
+frame_1/duration = 1.0
+frame_2/texture = ExtResource("3_bexjk")
+frame_2/duration = 1.0
+frame_3/texture = ExtResource("4_rejfb")
+frame_3/duration = 1.0
+frame_4/texture = ExtResource("5_rk7bj")
+frame_4/duration = 1.0
+frame_5/texture = ExtResource("6_6qbuk")
+frame_5/duration = 1.0
+frame_6/texture = ExtResource("7_3kdt4")
+frame_6/duration = 1.0
+frame_7/texture = ExtResource("8_egtrx")
+frame_7/duration = 1.0
 
 [resource]
 script = ExtResource("2_brn7f")
-icon = ExtResource("1_ad40m")
-name = "GrapplingHook"
-type = "Weapon"
+icon = SubResource("AnimatedTexture_stmvr")
+name = "Star"
+type = "Ability"

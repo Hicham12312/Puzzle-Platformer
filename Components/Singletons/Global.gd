@@ -4,7 +4,8 @@ var grappling_hook = "res://Resources/items/Grappling_Hook.tres"
 
 var items_Dictionary: Dictionary = {
 	grappling_hook = "GrapplingHook",
-	double_jump = "DoubleJump"
+	double_jump = "DoubleJump",
+	star = "Star"
 }
 
 var player: CharacterBody2D
