@@ -81,7 +81,6 @@ shape = SubResource("WorldBoundaryShape2D_vyu1q")
 
 [node name="DoubleJumpItem" parent="." instance=ExtResource("3_1gq5a")]
 position = Vector2(2365, 526)
-scale = Vector2(7, 7)
 stats = ExtResource("4_fgstx")
 
 [node name="StarItem" parent="." instance=ExtResource("3_1gq5a")]

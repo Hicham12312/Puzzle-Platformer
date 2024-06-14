@@ -3,6 +3,7 @@
 [ext_resource type="Script" path="res://Components/AbstractItem/AbstractItem.gd" id="1_d7c4u"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0oa1u"]
+size = Vector2(380, 361)
 
 [node name="AbstractItem" type="Node2D"]
 script = ExtResource("1_d7c4u")
