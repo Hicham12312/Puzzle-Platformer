@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bexah4bhbnyk3" path="res://icon.svg" id="1_yt716"]
 [ext_resource type="PackedScene" uid="uid://dmsb26liyteur" path="res://Components/Slot/slot.tscn" id="3_nmmd1"]
 [ext_resource type="Script" path="res://Resources/Scripts/HotBar.gd" id="3_t2627"]
-[ext_resource type="Resource" uid="uid://cm1ie5av5oerv" path="res://Resources/items/DoubleJump.tres" id="4_cdgpl"]
+[ext_resource type="Script" path="res://Components/Player/Weapons.gd" id="5_ddwkh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6tncb"]
 size = Vector2(66, 65)
@@ -34,29 +34,29 @@ anchor_left = 0.425347
 anchor_top = 0.938272
 anchor_right = 0.574653
 anchor_bottom = 1.0
-offset_left = -248.0
-offset_top = -120.0
-offset_right = -248.0
-offset_bottom = -120.0
+offset_left = -176.0
+offset_top = -84.0002
+offset_right = -176.0
+offset_bottom = -84.0
 grow_horizontal = 2
 grow_vertical = 0
-scale = Vector2(4, 4)
+scale = Vector2(3, 3)
 script = ExtResource("3_t2627")
 
 [node name="slot" parent="UI/HotBar" instance=ExtResource("3_nmmd1")]
 layout_mode = 2
-stats = ExtResource("4_cdgpl")
 
 [node name="slot2" parent="UI/HotBar" instance=ExtResource("3_nmmd1")]
 layout_mode = 2
-stats = ExtResource("4_cdgpl")
 
 [node name="slot3" parent="UI/HotBar" instance=ExtResource("3_nmmd1")]
 layout_mode = 2
-stats = ExtResource("4_cdgpl")
 
 [node name="slot4" parent="UI/HotBar" instance=ExtResource("3_nmmd1")]
 layout_mode = 2
-stats = ExtResource("4_cdgpl")
 
 [node name="Weapons" type="Node2D" parent="."]
+script = ExtResource("5_ddwkh")
+
+[connection signal="index" from="UI/HotBar" to="Weapons" method="_on_index"]
+[connection signal="child_entered_tree" from="Weapons" to="Weapons" method="_on_child_entered_tree"]

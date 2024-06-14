@@ -1,7 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://c20yj405htqgt"]
+[gd_scene load_steps=7 format=3 uid="uid://c20yj405htqgt"]
 
 [ext_resource type="Texture2D" uid="uid://bexah4bhbnyk3" path="res://icon.svg" id="1_mmf1f"]
 [ext_resource type="PackedScene" uid="uid://cwywl5l6ly7oe" path="res://Components/Player/player.tscn" id="2_megox"]
+[ext_resource type="PackedScene" uid="uid://i8ldtgka8bdj" path="res://Components/AbstractItem/abstract_item.tscn" id="3_1gq5a"]
+[ext_resource type="Resource" uid="uid://cm1ie5av5oerv" path="res://Resources/items/DoubleJump.tres" id="4_fgstx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qjovc"]
 size = Vector2(132, 125.214)
@@ -75,5 +77,10 @@ position = Vector2(272, 2353)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Death"]
 shape = SubResource("WorldBoundaryShape2D_vyu1q")
+
+[node name="AbstractItem" parent="." instance=ExtResource("3_1gq5a")]
+position = Vector2(2365, 526)
+scale = Vector2(7, 7)
+stats = ExtResource("4_fgstx")
 
 [connection signal="screen_exited" from="Player/VisibleOnScreenNotifier2D" to="Player" method="_on_visible_on_screen_notifier_2d_screen_exited"]

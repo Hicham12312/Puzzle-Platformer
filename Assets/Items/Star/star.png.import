@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bbi6wjy8xi4sv"
-path="res://.godot/imported/Grappling_Hook-removebg-preview.png-5399741583a191d408777621dec122c8.ctex"
+uid="uid://dqjpsnd5fwog5"
+path="res://.godot/imported/star.png-c30bac510a4ddab45ea4a0770542288a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Items/Grappling_Hook-removebg-preview.png"
-dest_files=["res://.godot/imported/Grappling_Hook-removebg-preview.png-5399741583a191d408777621dec122c8.ctex"]
+source_file="res://Assets/Items/Star/star.png"
+dest_files=["res://.godot/imported/star.png-c30bac510a4ddab45ea4a0770542288a.ctex"]
 
 [params]
 

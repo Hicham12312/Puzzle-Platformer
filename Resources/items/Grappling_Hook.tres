@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://urgotiloxkdn"]
 
-[ext_resource type="Texture2D" uid="uid://bbi6wjy8xi4sv" path="res://Assets/Items/Grappling_Hook-removebg-preview.png" id="1_ad40m"]
+[ext_resource type="Texture2D" uid="uid://bbi6wjy8xi4sv" path="res://Assets/Items/GrapplingHook/Grappling_Hook-removebg-preview.png" id="1_ad40m"]
 [ext_resource type="Script" path="res://Resources/Scripts/item.gd" id="2_brn7f"]
 
 [resource]
