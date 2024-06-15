@@ -29,7 +29,8 @@ window/stretch/aspect="expand"
 folder_colors={
 "res://Assets/": "yellow",
 "res://Components/": "red",
-"res://Resources/": "teal"
+"res://Resources/": "teal",
+"res://Shaders/": "gray"
 }
 
 [input]
