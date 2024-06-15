@@ -18,6 +18,7 @@ func _on_index(i = current_index):
 	current_index = i
 
 
+@warning_ignore("unused_parameter")
 func _on_child_entered_tree(node):
 	_on_index()
 

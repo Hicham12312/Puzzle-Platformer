@@ -12,7 +12,7 @@
 
 [sub_resource type="AnimatedTexture" id="AnimatedTexture_stmvr"]
 frames = 8
-speed_scale = 25.0
+speed_scale = 22.0
 frame_0/texture = ExtResource("1_4ygld")
 frame_1/texture = ExtResource("2_imsj8")
 frame_1/duration = 1.0

@@ -27,7 +27,7 @@ fill_mode = 5
 texture_progress = ExtResource("2_6xmfq")
 tint_progress = Color(0.582376, 0.582376, 0.582375, 0.894118)
 
-[node name="DoubleJumpTimer" type="Timer" parent="."]
+[node name="Timer" type="Timer" parent="."]
 wait_time = 5.0
 one_shot = true
 
@@ -48,4 +48,4 @@ horizontal_alignment = 2
 vertical_alignment = 2
 
 [connection signal="pressed" from="." to="." method="_on_pressed"]
-[connection signal="timeout" from="DoubleJumpTimer" to="." method="_on_double_jump_timer_timeout"]
+[connection signal="timeout" from="Timer" to="." method="_on_double_jump_timer_timeout"]

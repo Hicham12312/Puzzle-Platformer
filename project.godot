@@ -20,8 +20,8 @@ Global="*res://Components/Singletons/Global.gd"
 
 [display]
 
+window/size/viewport_width=1500
 window/stretch/mode="viewport"
-window/stretch/aspect="expand"
 
 [file_customization]
 

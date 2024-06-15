@@ -2,10 +2,20 @@ extends Node
 
 var grappling_hook = "res://Resources/items/Grappling_Hook.tres"
 
-var items_Dictionary: Dictionary = {
-	grappling_hook = "GrapplingHook",
-	double_jump = "DoubleJump",
-	star = "Star"
-}
+class Items:
+	var weaponsClass = Weapons.new() as Weapons
+	var AbilitysClass = Abilitys.new() as Abilitys
+	var ConsumableClass = Consumable.new() as Consumable
+	class Weapons:
+		var grappling_hook = "GrapplingHook"
+	
+	class Abilitys:
+		var double_jump = "DoubleJump"
+		var star = "Star"
+	
+	class Consumable:
+		pass
+
+
 
 var player: CharacterBody2D

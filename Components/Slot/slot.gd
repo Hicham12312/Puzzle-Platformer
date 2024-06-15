@@ -2,7 +2,7 @@ extends Button
 
 
 @onready var progress_bar = $TextureProgressBar
-@onready var timer = $DoubleJumpTimer
+@onready var timer = $Timer
 @onready var time = $Time
 
 @export var stats: Item = null:
@@ -19,6 +19,7 @@ func _ready():
 	set_process(false)
 	set_process_input(false)
 
+@warning_ignore("unused_parameter")
 func _process(delta):
 	time.text = "%3.1f" % timer.time_left
 	progress_bar.value = timer.time_left
@@ -31,13 +32,15 @@ func _input(event):
 func use_item():
 	if stats == null:
 		return
-	if stats.name == Global.items_Dictionary.get("double_jump"):
+	var ItemsClass = Global.Items.new() as Global.Items
+	if stats.name == ItemsClass.AbilitysClass.double_jump:
 		Global.player.MAX_JUMPS = 2
 		print_debug("you can double jump")
 		timer.start()
 		disabled = true
 		set_process(true)
-		stats = null
+	elif stats.name == ItemsClass.AbilitysClass.star:
+		pass
 
 
 func _on_pressed():
@@ -52,3 +55,4 @@ func _on_double_jump_timer_timeout():
 	time.text = ""
 	set_process(false)
 	Global.player.MAX_JUMPS = 1
+	stats = null
