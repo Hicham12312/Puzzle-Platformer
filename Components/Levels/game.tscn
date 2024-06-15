@@ -1,5 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://c20yj405htqgt"]
+[gd_scene load_steps=9 format=3 uid="uid://c20yj405htqgt"]
 
+[ext_resource type="Texture2D" uid="uid://dh37ecmsbo133" path="res://white 20x20.jpg" id="1_4i5yf"]
 [ext_resource type="Texture2D" uid="uid://bexah4bhbnyk3" path="res://icon.svg" id="1_mmf1f"]
 [ext_resource type="PackedScene" uid="uid://cwywl5l6ly7oe" path="res://Components/Player/player.tscn" id="2_megox"]
 [ext_resource type="PackedScene" uid="uid://i8ldtgka8bdj" path="res://Components/AbstractItem/abstract_item.tscn" id="3_1gq5a"]
@@ -14,13 +15,13 @@ size = Vector2(132, 125.214)
 [node name="Game" type="Node2D"]
 
 [node name="ground" type="StaticBody2D" parent="."]
-position = Vector2(574, 1353)
-scale = Vector2(80, 2)
+position = Vector2(574, 1514)
+scale = Vector2(57, 2)
 
 [node name="Sprite2D" type="Sprite2D" parent="ground"]
 modulate = Color(0, 0, 0, 1)
-scale = Vector2(1.03078, 1)
-texture = ExtResource("1_mmf1f")
+scale = Vector2(6.6, 6)
+texture = ExtResource("1_4i5yf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ground"]
 shape = SubResource("RectangleShape2D_qjovc")
@@ -62,8 +63,8 @@ texture = ExtResource("1_mmf1f")
 shape = SubResource("RectangleShape2D_qjovc")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(578, -114)
-zoom = Vector2(0.29, 0.2)
+position = Vector2(578, -130)
+zoom = Vector2(0.2, 0.2)
 
 [node name="Player" parent="." instance=ExtResource("2_megox")]
 position = Vector2(519, 247)
