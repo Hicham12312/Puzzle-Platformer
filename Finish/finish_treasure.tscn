@@ -55,7 +55,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("10_d41v1")
 }],
-"loop": true,
+"loop": false,
 "name": &"Close",
 "speed": 12.0
 }, {
@@ -90,7 +90,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("20_463na")
 }],
-"loop": true,
+"loop": false,
 "name": &"Open",
 "speed": 10.0
 }]
@@ -99,12 +99,12 @@ animations = [{
 radius = 24.0
 
 [node name="Finish_treasure" type="Area2D"]
+z_index = -1
 script = ExtResource("1_oantq")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_k11o6")
-animation = &"Open"
-frame_progress = 0.172496
+animation = &"Close"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, 2)

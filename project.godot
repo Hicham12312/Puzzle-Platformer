@@ -25,6 +25,10 @@ SceneSwitcher="*res://Components/Singletons/scene_switcher.gd"
 window/stretch/mode="viewport"
 window/stretch/aspect="expand"
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/Todo_Manager/plugin.cfg")
+
 [file_customization]
 
 folder_colors={

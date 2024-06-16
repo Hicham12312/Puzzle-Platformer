@@ -10,9 +10,9 @@
 [ext_resource type="Texture2D" uid="uid://bfob1ic015es4" path="res://Assets/Items/Star/tile007.png" id="8_efynx"]
 [ext_resource type="Script" path="res://Resources/Scripts/item.gd" id="9_uarwv"]
 
-[sub_resource type="AnimatedTexture" id="AnimatedTexture_stmvr"]
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_sd17c"]
 frames = 8
-speed_scale = 22.0
+speed_scale = 28.0
 frame_0/texture = ExtResource("1_4ygld")
 frame_1/texture = ExtResource("2_imsj8")
 frame_1/duration = 1.0
@@ -31,6 +31,6 @@ frame_7/duration = 1.0
 
 [resource]
 script = ExtResource("9_uarwv")
-icon = SubResource("AnimatedTexture_stmvr")
+icon = SubResource("AnimatedTexture_sd17c")
 name = "Star"
 type = "Ability"
