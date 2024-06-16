@@ -11,6 +11,8 @@ const GRAVITY = 200
 var MAX_JUMPS = 1
 var current_jumps = 1
 
+var Alive: bool = true
+
 @onready var label = $UI/Label
 @onready var hot_bar = $UI/HotBar
 @onready var sprite_2d = $Sprite2D

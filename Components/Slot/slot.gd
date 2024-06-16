@@ -40,9 +40,10 @@ func use_item():
 		disabled = true
 		set_process(true)
 	elif stats.name == ItemsClass.AbilitysClass.star:
-		const STAR_MUSIC = preload("res://Music/New Super Mario Bros (mp3cut.net).mp3")
+		const STAR_MUSIC = preload("res://Music/Star_Music.mp3")
 		Global.player.sprite_2d.material.set_shader_parameter("strength", 0.5)
-		Music.set_stream(STAR_MUSIC)
+		Music.stream = STAR_MUSIC
+		Music.play()
 
 
 func _on_pressed():

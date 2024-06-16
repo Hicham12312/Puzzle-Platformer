@@ -834,7 +834,7 @@ terrain_set_0/terrain_0/color = Color(1, 0.2738, 0.349085, 1)
 sources/0 = SubResource("TileSetAtlasSource_v3wcb")
 pattern_0 = SubResource("TileMapPattern_gymsp")
 
-[node name="Game" type="Node2D"]
+[node name="Level02" type="Node2D"]
 
 [node name="ground" type="StaticBody2D" parent="."]
 position = Vector2(574, 1514)
