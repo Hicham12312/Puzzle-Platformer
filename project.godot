@@ -17,6 +17,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 Global="*res://Components/Singletons/Global.gd"
+Music="*res://Components/Singletons/music.tscn"
 
 [display]
 
@@ -29,7 +30,9 @@ window/stretch/aspect="expand"
 folder_colors={
 "res://Assets/": "yellow",
 "res://Components/": "red",
+"res://Music/": "green",
 "res://Resources/": "teal",
+"res://SFX/": "purple",
 "res://Shaders/": "gray"
 }
 

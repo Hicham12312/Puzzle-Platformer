@@ -1,10 +1,17 @@
-[gd_scene load_steps=7 format=3 uid="uid://cwywl5l6ly7oe"]
+[gd_scene load_steps=9 format=3 uid="uid://cwywl5l6ly7oe"]
 
 [ext_resource type="Script" path="res://Components/Player/Player.gd" id="1_w7q3m"]
 [ext_resource type="Texture2D" uid="uid://bexah4bhbnyk3" path="res://icon.svg" id="1_yt716"]
+[ext_resource type="Shader" path="res://Shaders/Rainbow.gdshader" id="2_8gh5x"]
 [ext_resource type="PackedScene" uid="uid://dmsb26liyteur" path="res://Components/Slot/slot.tscn" id="3_nmmd1"]
 [ext_resource type="Script" path="res://Resources/Scripts/HotBar.gd" id="3_t2627"]
 [ext_resource type="Script" path="res://Components/Player/Weapons.gd" id="5_ddwkh"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_23rgp"]
+shader = ExtResource("2_8gh5x")
+shader_parameter/strength = 0.0
+shader_parameter/speed = 0.5
+shader_parameter/angle = 0.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6tncb"]
 size = Vector2(66, 65)
@@ -14,7 +21,9 @@ script = ExtResource("1_w7q3m")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 modulate = Color(0.6, 0.443137, 0.0117647, 1)
-scale = Vector2(0.5, 0.5)
+material = SubResource("ShaderMaterial_23rgp")
+position = Vector2(-1, -0.5)
+scale = Vector2(0.515625, 0.507813)
 texture = ExtResource("1_yt716")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

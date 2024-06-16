@@ -13,6 +13,7 @@ var current_jumps = 1
 
 @onready var label = $UI/Label
 @onready var hot_bar = $UI/HotBar
+@onready var sprite_2d = $Sprite2D
 
 @warning_ignore("unused_parameter")
 func _physics_process(delta):

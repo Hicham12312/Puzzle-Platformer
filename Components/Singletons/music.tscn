@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://budatq2fghnh6"]
+
+[ext_resource type="AudioStream" uid="uid://t2sil1n7c1ko" path="res://Music/Worldmap Theme.mp3" id="1_5qrag"]
+
+[node name="Music" type="AudioStreamPlayer"]
+stream = ExtResource("1_5qrag")
+autoplay = true
+bus = &"Music"
