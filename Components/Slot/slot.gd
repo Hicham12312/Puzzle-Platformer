@@ -23,27 +23,38 @@ func _ready():
 func _process(delta):
 	time.text = "%3.1f" % timer.time_left
 	progress_bar.value = timer.time_left
+	timer.wait_time = 10
 
+func _physics_process(delta):
+	if !Global.player.Alive:
+		set_process_input(false)
+		set_pressed_no_signal(false)
+		Global.player.sprite_2d.material.set_shader_parameter("strength", 0)
 
 func _input(event):
 	if event.is_action_pressed("use_item"):
 		use_item()
 
 func use_item():
-	if stats == null:
+	if stats == null or !Global.player.Alive:
 		return
 	var ItemsClass = Global.Items.new() as Global.Items
 	if stats.name == ItemsClass.AbilitysClass.double_jump:
+		timer.wait_time = 5
+		progress_bar.max_value = timer.wait_time
 		Global.player.MAX_JUMPS = 2
-		print_debug("you can double jump")
 		timer.start()
 		disabled = true
 		set_process(true)
 	elif stats.name == ItemsClass.AbilitysClass.star:
-		const STAR_MUSIC = preload("res://Music/Star_Music.mp3")
+		timer.wait_time = 10
+		progress_bar.max_value = timer.wait_time
 		Global.player.sprite_2d.material.set_shader_parameter("strength", 0.5)
-		Music.stream = STAR_MUSIC
+		Music.stream = load("res://Music/Star_Music.mp3")
 		Music.play()
+		timer.start()
+		disabled = true
+		set_process(true)
 
 
 func _on_pressed():
@@ -53,9 +64,16 @@ func _on_pressed():
 
 
 
-func _on_double_jump_timer_timeout():
+func _on_timer_timeout():
+	var ItemsClass = Global.Items.new()
 	disabled = false
 	time.text = ""
 	set_process(false)
-	Global.player.MAX_JUMPS = 1
+	if stats.name == ItemsClass.AbilitysClass.double_jump:
+		Global.player.MAX_JUMPS = 1
+	elif stats.name == ItemsClass.AbilitysClass.star:
+		Global.player.sprite_2d.material.set_shader_parameter("strength", 0)
+		var music_time = Music.get_playback_position()
+		Music.stream = load("res://Music/Worldmap Theme.mp3")
+		Music.play(music_time)
 	stats = null

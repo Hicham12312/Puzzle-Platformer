@@ -69,8 +69,11 @@ func jump():
 
 
 func _on_visible_on_screen_notifier_2d_screen_exited():
+	Alive = false
 	get_tree().call_deferred("reload_current_scene")
 
 func add_item(stats):
+	if !Alive:
+		return
 	hot_bar.add_item(stats)
 

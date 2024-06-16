@@ -18,10 +18,10 @@ config/icon="res://icon.svg"
 
 Global="*res://Components/Singletons/Global.gd"
 Music="*res://Components/Singletons/music.tscn"
+SceneSwitcher="*res://Components/Singletons/scene_switcher.gd"
 
 [display]
 
-window/size/viewport_width=1500
 window/stretch/mode="viewport"
 window/stretch/aspect="expand"
 
