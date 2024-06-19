@@ -16,6 +16,15 @@ class Items:
 	class Consumable:
 		pass
 
-
-
 var player: CharacterBody2D
+
+var is_reloading_scene: bool
+
+enum Levels {
+	noLevel,
+	Level01,
+	Level02,
+	level_test
+}
+
+var previous_level = Levels.noLevel

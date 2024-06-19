@@ -1,7 +1,7 @@
 extends CharacterBody2D
 class_name Player
 
-const SPEED = 1200
+var SPEED = 1200
 const JUMP_POWER = 4000
 
 const ACC = 50
@@ -12,6 +12,9 @@ var MAX_JUMPS = 1
 var current_jumps = 1
 
 var Alive: bool = true
+var can_be_damaged: bool = true
+
+var health := 100.0
 
 @onready var label = $UI/Label
 @onready var hot_bar = $UI/HotBar
@@ -67,7 +70,11 @@ func jump():
 	if is_on_floor():
 		current_jumps = 1
 
-
+func take_damage(Damage: int):
+	health -= Damage
+	if health <= 0:
+		get_tree().paused = true
+		print_rich("[color=red][b]you are dead[/b][/color]")
 
 func add_item(stats):
 	if !Alive:

@@ -50,6 +50,7 @@ func use_item():
 		timer.wait_time = 10
 		progress_bar.max_value = timer.wait_time
 		Global.player.sprite_2d.material.set_shader_parameter("strength", 0.5)
+		Global.player.SPEED *= 2
 		Music.stream = load("res://Music/Star_Music.mp3")
 		Music.play()
 		timer.start()

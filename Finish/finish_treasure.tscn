@@ -96,7 +96,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5pvtq"]
-radius = 24.0
+radius = 21.0238
 
 [node name="Finish_treasure" type="Area2D"]
 z_index = -1
@@ -107,7 +107,7 @@ sprite_frames = SubResource("SpriteFrames_k11o6")
 animation = &"Close"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1, 2)
+position = Vector2(1, 4)
 shape = SubResource("CircleShape2D_5pvtq")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
